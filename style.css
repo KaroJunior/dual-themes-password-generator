@@ -1,0 +1,357 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('assets/Swhite.svg') !important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.5s ease-in-out;
+  }
+
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px; /* Or even 850px depending on how tight you want it */
+    margin: 0 auto;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex: 1 1 320px;       
+    max-width: 450px;       
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .output-group,
+  .check-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .output-group input,
+  .check-group input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .output-group button,
+  .check-group button {
+    padding: 10px 14px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    min-width: 90px;
+    white-space: nowrap;
+  }
+  
+  .output-group button i {
+    font-size: 1.2rem;
+  }
+  
+  .output-group button:hover,
+  .check-group button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: green;
+    min-height: 1em;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  /* === Options arranged in 2-per-row layout === */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* always two per row */
+    gap: 12px;
+    justify-items: start;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  
+  .options label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 5px 0;
+    font-weight: 400;
+  }
+  
+  input[type="number"] {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.5s ease-in-out;
+  }
+  
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: ease-out 0.3s;
+}
+
+/* Make global buttons green instead of blue */
+button,
+.output-group button,
+.check-group button {
+  background-color: #28a745;
+}
+
+button:hover,
+.output-group button:hover,
+.check-group button:hover {
+  background-color: #218838;
+}
+
+/* Options all on one line */
+/* === Options Layout - 2 per line neatly === */
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: 0.5s ease-in-out;
+  }
+  
+
+/* Green checkbox checkmark */
+input[type="checkbox"] {
+  accent-color: #28a745;
+}
+
+/* Title styling and layout */
+.main-container > h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.container > h1 {
+  font-size: 1.8rem;
+}
+
+/* Notification message spacing fix */
+.message {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: green;
+  min-height: 1.2em;
+}
+
+/* Output & check group layout improvements */
+.output-group,
+.check-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Make sure image icon buttons in output-group are clean */
+.output-group button img {
+  width: 20px;
+  height: 20px;
+}
+  
+  #strengthOutput {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    min-height: 1.2em;
+  }
+  
+  #strengthOutput strong {
+    color: #007bff;
+  }
+  
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .output-group,
+    .check-group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .output-group button,
+    .check-group button {
+      width: 100%;
+      min-width: unset;
+      margin-top: 8px;
+    }
+  
+    label {
+      text-align: center;
+    }
+  }
+  
+/* === THEME SWITCHING === */
+
+/* Default Light Mode (already applies) */
+body {
+  background: #f0f4f8;
+  color: #000;
+}
+
+/* === DARK MODE (Matrix Hacker Vibes) === */
+body.dark-mode {
+    background-color: #000; /* pure black background */
+    background-image: url('assets/Sblack.svg') !important; 
+    color: #00ff88; /* neon green text for general readability */
+  }
+  
+  
+  /* Container glow and background */
+  body.dark-mode .container {
+    background-color: #111;
+    color: #00ff88;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 12px #00ff88;
+  }
+  
+  /* Input fields in dark mode */
+  body.dark-mode input[type="text"],
+  body.dark-mode input[type="number"],
+  body.dark-mode .output-group input,
+  body.dark-mode .check-group input {
+    background-color: #000;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+  }
+  
+  /* Green buttons preserved */
+  body.dark-mode button,
+  body.dark-mode .output-group button,
+  body.dark-mode .check-group button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+  }
+  
+  body.dark-mode button:hover,
+  body.dark-mode .output-group button:hover,
+  body.dark-mode .check-group button:hover {
+    background-color: #218838;
+  }
+  
+  /* Green checkbox ticks */
+  body.dark-mode input[type="checkbox"] {
+    accent-color: #28a745;
+  }
+  
+  /* Headings green (neon readable) */
+  body.dark-mode h1,
+  body.dark-mode label {
+    color: #00ff88;
+  }
+  
+  /* Notification messages */
+  body.dark-mode #strengthOutput {
+    color: #f0f4f8; /* brighter lime green */
+  }
+
+
+  body.dark-mode .message {
+    color: #f0f4f8 !important;
+  }
+  
+  /* === Options 2 per line (always clean) === */
+  .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr)); /* ensures 2 per line or more */
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+.theme-toggle-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Other Responsive tweaks */
+@media (max-width: 768px) {
+  .main-container > h1 {
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+  
+  .container > h1 {
+    font-size: 1.3rem;
+  }
+
+  input {
+    align-self: center !important;
+  }
+
+  input[type="number"] {
+    width: 95%;
+  }
+}
